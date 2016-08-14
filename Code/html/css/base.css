@@ -1,0 +1,41 @@
+.head									/*Styling For The Shadowed Box In Top*/
+      {
+	position:absolute ;
+	top:15px ;
+	border-radius:30px ;
+	margin-left:0% ;
+	padding-left:90px ;
+	padding-right:0px ;
+	padding-top:5px ;
+	width:92%;
+      }	
+      .nhead								/*Styling For LEGACY KLOUD*/
+      {
+	color:aqua ;
+	font-family:Chiller ;
+        font-size:30px ;
+      }	
+      .misc								/*Styling For The Position Of Hyperlinks In Top Box*/
+      {
+	font-size:15px ;
+	font-family: harlow solid italic ;
+	color:orange ;
+	position:absolute ;
+	margin-left:980px ;
+	top: 40px ;
+	width:25% ;
+      }
+      .menu								/*Styling For The Hyperlinks In Top Box*/
+      {
+	margin-left:20px ;
+	font-size:30px ;
+	color:orange ;
+      }
+      .menu:hover
+      {
+	color:green;
+      }
+      .menu:visited
+      {
+	color:pink;
+      }

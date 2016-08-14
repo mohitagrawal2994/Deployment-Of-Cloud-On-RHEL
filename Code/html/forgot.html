@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="keywords" content="Legacy Kloud">
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohit Agrawal, Kavita Rana, Abhishek Panda">
+    <title>Legacy Kloud</title>
+    <link rel=stylesheet type="text/css" href="css/base.css"  >
+  <style>
+      .head
+      {
+	box-shadow:15px 15px 150px white ;
+      }
+      .f2								/*Styling For The Position & Content Of Form*/
+      {
+	position:absolute;	
+	margin-left:880px ;
+	width:30%;
+	top:220px;
+      }
+  </style>
+  </head>
+  <body style="background:url('backgrounds/Body1.jpg') no-repeat top right;">
+      <div class="head">
+	<div class="nhead">LEGACY<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KLOUD</div>
+      </div>
+      <div class="misc">
+        <a class="menu" href="index.html">Home</a>
+        <a class="menu" href="about.html">About</a>
+        <a class="menu" href="contact.html">Contact</a>
+      </div>
+      <div class="f2">
+        <form method="post" action="http://192.168.0.8/cgi-bin/forgot.py" autocomplete="off">
+	<fieldset style=" border:double; color:white; "><legend style="font-size:40px; font-family:cooper black; color:white;">Forgot</legend><br><br><pre>
+	Username         :   <input type="text" id="uid" name="uid" placeholder="Enter Username"></input><br><br>
+	Contact          :   <input type="text" id="ph" name="ph" placeholder="Enter Contact"></input><br><br>
+	New Password     :   <input type="password" id="pass1" name="pass1" placeholder="Enter Password"></input><br><br>
+	Re-Type Password :   <input type="password" id="pass2" name="pass2" placeholder="Re-Type Password"></input><br><br>
+	<span style="margin-left:80px;"><input type="submit" style="border-radius:40px; background-color:black; color:white;"></input></span>
+	</pre></fieldset>
+	</form>
+      </div>
+  </body>
+  </html>

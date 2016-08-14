@@ -1,0 +1,24 @@
+Install The Following packages
+--------------------------------
+numpy
+virt-manager
+libvirt
+qemu-kvm
+mysql
+httpd
+nfs-utils
+sshd
+qrencode
+mysql python connector
+
+Perform The following operations on the RedHat Enterprise Linux
+-------------------------------------------------------------------
+disable SELINUX
+disable firewall
+/etc/sudoers file entry to allow apache root permisions
+/etc/exports file permissions to rwx to all
+creation of /media/mystorage folder
+creation of /myos folder
+creation of myvg a Volume Group
+mysql settings i.e. mysql_secure_installation
+changing of permissions of code(give permissions as a+rwx to html folder)

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="keywords" content="Legacy Kloud">
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohit Agrawal, Kavita Rana, Abhishek Panda">
+    <title>Legacy Kloud</title>
+    <link rel=stylesheet type="text/css" href="css/base.css"  >
+  <style>
+      .head
+      {
+	box-shadow:15px 15px 150px white ;
+      }
+      .f2								/*Styling For The Position & Content Of Form*/
+      {
+	position:absolute;	
+	margin-left:880px ;
+	width:30%;
+	top:220px;
+      }
+      #il								/*Styling For The Hyperlink To Forgot Page*/
+      {
+	color:white;
+	font-family:cooper black;
+	position:absolute;
+	top:520px;
+	left:910px;
+      }
+      #il:hover
+      {
+	color:green;
+      }
+      #lin								/*Styling For The Hyperlink To Register Page*/
+      {
+	color:white;
+	font-family:cooper black;
+	position:absolute;
+	top:520px ;
+	left:1140px ;
+      }
+      #lin:hover
+      {
+	color:green ;
+      }
+      #utxt
+      {
+	color:yellow;
+	position:absolute;
+	top:330px;
+	left:1100px;
+	width:10%
+      }
+      #ptxt
+      { 
+	color:yellow;
+	position:absolute;
+	top:390px;
+	left:1100px;
+	width:15%
+      }
+      </style>
+      <script>
+	function username(str)
+        {
+	  var xmlhttp = new XMLHttpRequest();
+          if(str == "")
+	    document.getElementById("utxt").innerHTML = "";
+          else
+	  {
+	    xmlhttp.onreadystatechange = function()
+            {
+              if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+              {
+                document.getElementById("utxt").innerHTML = xmlhttp.responseText;
+              }
+            };
+            xmlhttp.open("GET", "http://192.168.0.8/cgi-bin/AJAX/testuserl.py?q=" + str, true);
+            xmlhttp.send();
+          }
+        }
+	function password(str)
+        {
+	  var xmlhttp = new XMLHttpRequest();
+          if(str == "")
+	    document.getElementById("ptxt").innerHTML = ""
+          else
+	  {
+	    xmlhttp.onreadystatechange = function()
+            {
+              if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+              {
+                document.getElementById("ptxt").innerHTML = xmlhttp.responseText;
+              }
+            };
+            xmlhttp.open("GET", "http://192.168.0.8/cgi-bin/AJAX/testpass.py?q=" + str, true);
+            xmlhttp.send();
+          }
+        }
+  </script>
+  
+  </head>
+
+  <body style="background:url('backgrounds/Body1.jpg') no-repeat top right;">
+      <div class="head">
+	<div class="nhead">LEGACY<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KLOUD</div>
+      </div>
+      <div class="misc">
+        <a class="menu" href="index.html">Home</a>
+        <a class="menu" href="about.html">About</a>
+        <a class="menu" href="contact.html">Contact</a>
+      </div>
+      <div class="f2">
+        <form method="post" action="http://192.168.0.8/cgi-bin/login.py" autocomplete="off">
+	  <pre><fieldset style=" border:double; color:white; "><legend style="font-size:40px; font-family:cooper black; color:white;">SignIn</legend><br><br><span style="margin-left:30px; color:white; text-shadow:2px 2px black; font-family:cooper black;">Username  :</span>  <input type="text" size="30" maxlength="30" id="uid" name="uid" placeholder="Enter Username" onkeyup="username(this.value)" autofocus required></input><br><br><br><br><span style="margin-left:30px; color:white; text-shadow:2px 2px black; font-family:cooper black;">Password  :</span>  <input type="password" size="30" maxlength="30" id="passx" name="passx" placeholder="Enter Password" onkeyup="password(this.value)" required></input><br><br><br><br><input type="submit" value="Login" style="margin-left:160px; border-radius:40px; background-color:black; color:white;"></input></pre>
+	  </fieldset>
+	</form>
+      </div>
+      <a id="il" name="il" href="http://192.168.0.8/forgot.html">Forgot Your Password!</a>
+      <a id="lin" name="lin" href="http://192.168.0.8/register.html">Create An Account!</a>
+      <p id="utxt" name="utxt" ></p>
+      <p id="ptxt" name="ptxt"></p>
+  </body>
+</html>

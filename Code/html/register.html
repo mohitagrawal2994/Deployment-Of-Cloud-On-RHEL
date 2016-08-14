@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="keywords" content="Legacy Kloud">
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohit Agrawal, Kavita Rana, Abhishek Panda">
+    <title>Legacy Kloud</title>
+    <link rel=stylesheet type="text/css" href="css/base.css"  >
+  <style>
+      .head
+      {
+	box-shadow:15px 15px 150px white ;
+      }
+      .reg								/*Styling For The Position & Content Of Form*/
+      {
+        color:white ;
+	font-family:cooper black ;
+	position:absolute ;
+	top:120px ;
+	width:40% ;
+	margin-left:780px ;
+      }
+      .f1
+      {
+	margin-left:50px ;
+	color:white ;
+	text-shadow:2px 2px black ;
+      }
+      #utxt
+      {
+	color:yellow;
+	position:absolute;
+	top:330px;
+	left:100px;
+	width:10%
+      }
+  </style>
+  <script>
+    
+    function pmt()							//Function To Check Valid Details Filled In The Form
+    {
+      var a = document.getElementById('pass1').value;
+      var b = document.getElementById('pass2').value;
+      var c = 0 ;
+      if((a.length>=6)&&(b.length>=6))
+      {
+        if( a != b )
+        {
+	  alert('Entered Passwords Do Not Match');       	
+	  c = 1;
+        }
+      }
+      else
+      {
+	alert("The Password Should Be A Minimum Of 6 characters")
+	c = 1;
+      }
+      var x = document.getElementById('ph').value;
+      if(!((x<10000000000)&&(x>999999999)))
+      {
+        alert("The Phone No. Entered Is Not A Valid One") ;
+        c = 1 ;
+      }
+      if(c==1)
+      {
+        return false ;
+      }
+    }
+    function chck()							//Function To Display A Confirm Box To Proceed To Creation Of Account
+    {
+      if(confirm("Proceed To Creating The Account"))
+	return true ;
+      else
+	return false ;
+    }
+  </script>
+  </head>
+
+  <body style="background:url('backgrounds/Body1.jpg') no-repeat top right;">
+      <div class="head">
+	<div class="nhead">LEGACY<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KLOUD</div>
+      </div>
+      <div class="misc">
+        <a class="menu" href="index.html">Home</a>
+        <a class="menu" href="about.html">About</a>
+        <a class="menu" href="contact.html">Contact</a>
+      </div>
+      <div class="reg">
+	<form id="fom" name="fom" method="post" onsubmit="return chck();" action="http://192.168.0.8/cgi-bin/register.py" enctype="multipart/form-data" autocomplete="off">
+	  <pre><fieldset style=" border:double; color:white; "><legend style="color:white; font-size:40px ;font-family:cooper black;">SignUp</legend><br><br><div class="f1"><span style="font-family:cooper black; color:white;">Full Name                    :    <input type="text" id="fn" name="fn" size="30" maxlength="30" placeholder="Enter Full Name" autofocus required></input><br><br>Username                     :    <input type="text" id="uid" name="uid" size="30" maxlength="30" placeholder="Enter Username" required></input><br><br>Password                     :    <input type="password" id="pass1" name="pass1" size="30" maxlength="30" placeholder="Enter Password" required></input><br><br>Re-Type Password    :    <input type="password" id="pass2" name="pass2" size="30" maxlength="30" placeholder="Re-Type Password" required></input><br><br>D.O.B                              :    <select id="dd" name="dd">
+	        <option>01</option>
+	        <option>02</option>
+	        <option>03</option>
+	        <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+	      </select>    <select id="mm" name="mm">
+	        <option>01</option>
+	        <option>02</option>
+	        <option>03</option>
+	        <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>    <select id="yy" name="yy">
+		<option>1965</option>
+		<option>1966</option>
+		<option>1967</option>
+		<option>1968</option>
+		<option>1969</option>		
+		<option>1970</option>
+		<option>1971</option>
+		<option>1972</option>
+		<option>1973</option>
+		<option>1974</option>
+	        <option>1975</option>
+	        <option>1976</option>
+	        <option>1977</option>
+	        <option>1978</option>
+                <option>1979</option>
+                <option>1980</option>
+                <option>1981</option>
+                <option>1982</option>
+                <option>1983</option>
+                <option>1984</option>
+                <option>1985</option>
+                <option>1986</option>
+	        <option>1987</option>
+	        <option>1988</option>
+	        <option>1989</option>
+	        <option>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+                <option>1997</option>
+                <option>1998</option>
+	        <option>1999</option>
+	        <option>2000</option>
+	        <option>2001</option>
+	        <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+	        <option>2011</option>
+	        <option>2012</option>
+	        <option>2013</option>
+	        <option>2014</option>
+                <option>2015</option>
+              </select><br><br>Gender                           :   <input type="radio" id="gen" name="gen" value="Male" required>Male  </input><input type="radio" id="gen" name="gen" value="Female" required>Female</input><br><br>Email ID                        :    <input type="email" id="eid" name="eid" size="30" placeholder="Enter Email ID" required></input><br><br>Contact                          :    <input type="text" id="ph" name="ph" size="30" maxlength="10" placeholder="Enter Contact" required></input><br><br>Profile Pic                     :    <input type="file" id="pp" name="pp" size="15"></input><br><br><br>                      <input type="reset" value="Reset Entries" style="color:white; background-color:black; border-radius:40px;"></input>    <input type="submit" value="Create Account" onClick="return pmt();" style="color:white; background-color:black; border-radius:40px;"></input>
+	    </div></span></fieldset></pre>
+	</form>
+      </div>
+      <p id="utxt" name="utxt" ></p>
+      <p id="ptxt" name="ptxt"></p>
+      <p id="p1txt" name="p1txt"></p>
+      <p id="ctxt" name="ctxt"></p>
+  </body>
+</html>

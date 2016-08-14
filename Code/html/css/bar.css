@@ -1,0 +1,92 @@
+           #qw						/*Styling For The Grey Bar*/
+
+	   {
+	     position:absolute;
+
+             background:grey;
+
+	     top:90px ;
+
+	     padding:11px ;
+
+	     margin-left:-10px;
+
+	     width:98.5%;
+
+	   }
+	   
+	   #wq						/*Styling For The Profile Photo*/	
+
+	   {
+	     
+		position:absolute ;
+
+	        top:6px;
+	     
+		left:90px;
+
+	   }
+
+	   #wq:hover img
+
+	   {
+	     height:100px;
+	     width:100px ;
+	   }
+	   
+	   #list					/*Styling Of The Settings Button*/	
+
+	   {
+	  
+	   position:absolute;
+
+	     top:88px ;
+
+	     margin-left:1100px ;
+
+	   }
+	 
+ 	   #chng li ul
+
+	   {
+	   
+	    padding:0px ;
+	 
+	    display:none;
+
+	   }
+
+	   #chng li ul li a
+	 
+	  {
+	 
+	    text-decoration:none;
+	 
+	    color:white;
+	 
+	    font-size:15px ;
+	
+	   }
+	   
+	  #chng li ul li
+	 
+	  {
+	  
+	   border:1px solid red;
+	
+	     background-color:black;
+
+	     padding:10px ;
+
+	   }
+	
+	   #chng li
+
+	   {
+             list-style:none;
+	   }
+ 
+ 	   #chng li:hover ul
+	   {
+    	     display:block;
+	   }
