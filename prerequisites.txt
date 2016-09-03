@@ -1,4 +1,6 @@
-Install The Following packages
+The Following procedure must be followed as listed below to setup the cloud on a RedHat Enterprise Linux 6.4
+
+Install The Following RPM packages
 --------------------------------
 numpy
 virt-manager
@@ -11,14 +13,15 @@ sshd
 qrencode
 mysql python connector
 
-Perform The following operations on the RedHat Enterprise Linux
+Perform The following operations after the installation of all the packages
 -------------------------------------------------------------------
-disable SELINUX
-disable firewall
-/etc/sudoers file entry to allow apache root permisions
-/etc/exports file permissions to rwx to all
-creation of /media/mystorage folder
-creation of /myos folder
-creation of myvg a Volume Group
-mysql settings i.e. mysql_secure_installation
-changing of permissions of code(give permissions as a+rwx to html folder)
+1.> disable SELINUX
+2.> disable firewall
+3.> At file /etc/sudoers on line 98 edit to allow apache root permisions
+      apache ALL=(ALL) NOPASSWD:ALL
+4.> At file /etc/exports file give permissions as rwx to all users i.e. user+group+others
+5.> Create a folder at location as /media/mystorage
+6.> Create a folder at location as /myos
+7.> Create a Volume Group named myvg
+8.> Change mysql settings i.e. in mysql_secure_installation through terminal
+9.> On HTML folder give +rwx to all files, On CGI folder giver permissions as +x
