@@ -24,4 +24,5 @@ Perform The following operations after the installation of all the packages
 6.> Create a folder at location as /myos
 7.> Create a Volume Group named myvg
 8.> Change mysql settings i.e. in mysql_secure_installation through terminal
-9.> On HTML folder give +rwx to all files, On CGI folder giver permissions as +x
+9.> Extract the Websockify and NoVNC tar in the HTML folder
+10.> On HTML folder give +rwx to all files, On CGI folder giver permissions as +x
